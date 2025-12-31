@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Tenders</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>All Tenders</h1>
+
+    <table class="tenders-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Reference No</th>
+          <th>Opening Date</th>
+          <th>Closing Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (tenders && tenders.length) { %>
+          <% tenders.forEach(function(t){ %>
+            <tr>
+              <td class="title"><a href="<%= t.detailLink %>" target="_blank" rel="noopener"><%= t.title %></a></td>
+              <td><%= t.referenceNo %></td>
+              <td><%= t.openingDate %></td>
+              <td><%= t.closingDate %></td>
+            </tr>
+          <% }) %>
+        <% } else { %>
+          <tr><td colspan="4" class="empty">No tenders found</td></tr>
+        <% } %>
+      </tbody>
+    </table>
+
+  </div>
+</body>
+</html>
