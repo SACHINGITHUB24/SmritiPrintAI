@@ -1,0 +1,22 @@
+{
+  "name": "tenders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"npx nodemon apps.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "cheerio": "^1.1.2",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.34.0",
+    "puppeteer-core": "^24.34.0"
+  }
+}
